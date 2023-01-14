@@ -1,0 +1,186 @@
+
+.fconte {
+  position: relative;
+  font-weight: 900;
+  height: 5rem;
+  background-color: $gray-dark-color;
+  padding: 3.5rem 0;
+  font-family: "Lato", sans-serif;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @media (max-width: $bp-largest1) {
+    height: 3rem;
+    padding: 2.5rem 0;
+  }
+}
+.fpayment {
+  margin-right: 3rem;
+  & img {
+    height: 3rem;
+    &:last-child {
+      margin-left: 1.5rem;
+    }
+    @media (max-width: $bp-smallest) {
+      height: 2rem;
+    }
+  }
+  @media (max-width: $bp-smallest2) {
+    margin-right: 1.5rem;
+  }
+}
+
+.fmenu {
+  text-transform: uppercase;
+  color: white;
+  display: inline-block;
+  cursor: pointer;
+  pointer-events: none;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  @media (max-width: $bp-largest1) {
+    bottom: 10px !important;
+  }
+}
+
+.fmenu:hover {
+  pointer-events: all;
+}
+.flabel {
+  display: inline-block;
+  cursor: pointer;
+  pointer-events: all;
+  transition: all 1s;
+  font-size: 1.5rem;
+  background-color: transparent;
+  color: white;
+  border: none;
+  &:focus ,&:hover , &:active , &:visited {
+    border: none;
+    outline: none;
+  }
+  @media (max-width: $bp-smallest) {
+    font-size: 1.2rem;
+  }
+}
+.flabel:hover {
+  color: $primary-color;
+}
+.fspacer {
+  display: inline-block;
+  width: 80px;
+  margin-left: 15px;
+  margin-right: 15px;
+  vertical-align: middle;
+  cursor: pointer;
+  position: relative;
+  @media (max-width: $bp-smaller) {
+    width: 30px;
+  }
+  @media (max-width: $bp-smallest) {
+    width: 20px;
+    margin: 0 10px;
+  }
+}
+.fspacer:before {
+  content: "";
+  position: absolute;
+  border-bottom: 1px solid #ffffff;
+  height: 1px;
+  width: 0%;
+  transition: width 0.25s ease;
+  transition-delay: 0.7s;
+}
+.fitem {
+  position: relative;
+  display: inline-block;
+  margin-right: 30px;
+  top: 10px;
+  opacity: 0;
+  transition: opacity 0.5s ease, top 0.5s ease;
+  transition-delay: 0;
+  @media (max-width: $bp-smaller) {
+    margin-right: 15px;
+  }
+  @media (max-width: $bp-smallest) {
+    & > * {
+      height: 1.7rem;
+    }
+  }
+}
+span {
+  transition: color 0.5s ease;
+}
+.fitem:hover span {
+  color: $primary-color;
+}
+.fmenu:hover .fspacer:before {
+  width: 100%;
+  transition-delay: 0s;
+}
+.fmenu:hover .fitem {
+  opacity: 1;
+  top: 0px;
+}
+.fitem:nth-child(1) {
+  transition-delay: 0.45s;
+}
+.fitem:nth-child(2) {
+  transition-delay: 0.4s;
+}
+.fitem:nth-child(3) {
+  transition-delay: 0.35s;
+}
+.fitem:nth-child(4) {
+  transition-delay: 0.3s;
+}
+.fitem:nth-child(5) {
+  transition-delay: 0.25s;
+}
+.fitem:nth-child(6) {
+  transition-delay: 0.2s;
+}
+.fitem:nth-child(7) {
+  transition-delay: 0.15s;
+}
+.fitem:nth-child(8) {
+  transition-delay: 0.1s;
+}
+.fitem:nth-child(9) {
+  transition-delay: 0.05s;
+}
+.fitem:nth-child(10) {
+  transition-delay: 0s;
+}
+.fmenu:hover .fitem:nth-child(1) {
+  transition-delay: 0.25s;
+}
+.fmenu:hover .fitem:nth-child(2) {
+  transition-delay: 0.3s;
+}
+.fmenu:hover .fitem:nth-child(3) {
+  transition-delay: 0.35s;
+}
+.fmenu:hover .fitem:nth-child(4) {
+  transition-delay: 0.4s;
+}
+.fmenu:hover .fitem:nth-child(5) {
+  transition-delay: 0.45s;
+}
+.fmenu:hover .fitem:nth-child(6) {
+  transition-delay: 0.5s;
+}
+.fmenu:hover .fitem:nth-child(7) {
+  transition-delay: 0.55s;
+}
+.fmenu:hover .fitem:nth-child(8) {
+  transition-delay: 0.6s;
+}
+.fmenu:hover .fitem:nth-child(9) {
+  transition-delay: 0.65s;
+}
+.fmenu:hover .fitem:nth-child(10) {
+  transition-delay: 0.7s;
+}

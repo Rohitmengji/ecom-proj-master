@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+$bp-largest1: 93.75em; // 1500px
+$bp-largest2:78.125em; //1250px
+$bp-largest: 75em; //1200px
+$bp-large: 68.75em; //1100px
+$bp-medium2: 65.625em; //1050px
+$bp-medium: 62.5em; //1000px
+$bp-medium1: 56.25em; //900px
+$bp-small1: 50em; // 800px
+$bp-small2: 43.75em; //700px
+$bp-small: 37.5em; //600px
+$bp-smaller: 31.25em; //500px
+$bp-smallest: 25em; //400px
+$bp-smallest2: 21.875em; // 350px
+
+$primary-color: #ff3c20;
+$gray-color: #f7f7f7;
+$gray-dark-color: #232f3e;
+$blue-color: #0187de;
+$color-white: #fff;
+$color-black: black;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%; //10px
+  @media (max-width: $bp-largest) {
+    font-size: 56.25%; //9px
+  }
+  @media (max-width: $bp-small1) {
+    font-size: 50%; //9px
+  }
+
+  box-sizing: border-box;
+}
+
+.btn,
+.jumbotron,
+.nav :hover {
+  border-radius: 0px;
+}
+
+body {
+  // background: #343a40;
+
+  background: white;
+  position: relative;
+}

@@ -1,0 +1,60 @@
+.cbuttons {
+  background-color: $gray-color;
+  display: flex;
+  justify-content: space-evenly;
+}
+.c {
+  margin: 2rem 0;
+  border-radius: 2px;
+  font-size: 1.5rem;
+  padding: 0.7rem;
+  // background-color: $gray-dark-color;
+}
+.p {
+  background-color: $gray-color;
+}
+.ccontainer {
+  min-height: calc(100vh - 15.3rem);
+  background-color: $gray-color;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 0 auto;
+  @media (max-width: $bp-small1) {
+    width: 80%;
+  }
+  &-hedding {
+    margin: 2rem 0;
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    display: inline-block;
+    font-weight: 500;
+    transition: all 0.2s;
+    margin: 0 auto;
+    &:hover {
+      text-shadow: 0.5rem 1rem 2rem rgba($primary-color, 0.2);
+      transform: translateY(-4px) scale(1.1);
+    }
+    @media (max-width: $bp-small1) {
+      font-size: 2rem;
+    }
+  }
+  &-form {
+    display: flex;
+    flex-direction: column;
+    &-label {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    &-input {
+      margin-bottom: 2rem;
+      font-size: 1.7rem;
+    }
+    &-button {
+      align-self: start;
+      font-size: 1.2rem;
+      padding: 1rem;
+    }
+  }
+}

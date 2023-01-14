@@ -1,0 +1,247 @@
+.lcontainer {
+  display: grid;
+  grid-template-columns: [start-image] minmax(min-content, 30vw) [end-image start-form] 70vw [ end-form];
+  // height: calc(100vh - 5rem);
+  &-image {
+    grid-column: start-image / end-image;
+    z-index: -1;
+    position: relative;
+
+    @media (max-width: $bp-medium1) {
+      display: none;
+    }
+
+    &-logo {
+      z-index: 1;
+      height: 3rem;
+      position: absolute;
+      top: 3rem;
+      left: 3rem;
+    }
+    &-text {
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+      left: 3rem;
+      z-index: 555;
+      &-headding {
+        color: white;
+        font-size: 4.5rem;
+      }
+      &-description {
+        color: gray;
+        font-size: 1.5rem;
+      }
+    }
+    &-date {
+      position: absolute;
+      bottom: 3rem;
+      left: 3rem;
+      color: gray;
+    }
+    &-product {
+      height: 100vh;
+      width: 100%;
+      background-size: cover;
+      background-position: center;
+    }
+  }
+  &-form {
+    grid-column: start-form / end-form;
+    position: relative;
+    background-color: #f2f2f2 !important;
+    width: 100%;
+&-back-container{
+  height: 50px;
+  width: 50px;
+  background-color: #fff;
+  border-radius: 100%;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 11111;
+  box-shadow: 0rem 1rem 3rem rgba(0, 0, 0, 0.6);
+  & > * {
+    transform: translateY(14px) translateX(14px);
+  }
+}
+    @media (max-width: $bp-medium1) {
+      position: static;
+      height: 100vh;
+
+      grid-column: start-image / end-form;
+    }
+    &-signup {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      color: gray;
+    }
+    .center-form {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      background-color: #ffffff;
+      padding: 4rem 4rem;
+      border-radius: 8px;
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+      transition: all 0.3s;
+
+      @media (max-width: $bp-smaller) {
+        width: 75%;
+      }
+      @media (max-width: $bp-smallest) {
+        width: 80%;
+      }
+
+      &:hover {
+        box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
+      }
+
+      &-hedding {
+        text-align: center;
+        margin-bottom: 2rem;
+        text-transform: uppercase;
+        font-weight: 400;
+        color: gray;
+      }
+      &-image-box {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+      &-image {
+        height: 8rem;
+      }
+    }
+  }
+}
+.center-form-button {
+  outline: none;
+  border: none;
+  width: 100%;
+  font-weight: 500;
+  text-transform: uppercase;
+  background-color: $gray-dark-color;
+  color: white;
+  padding: 1rem 0;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  transition: all 0.3s;
+  box-shadow: 0 0.7rem 1rem rgba(0, 0, 0, 0.6);
+  &:focus {
+    outline: none;
+    background-color: #29394d;
+    transform: translateY(-2px);
+    box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.6);
+  }
+  &:hover {
+    background-color: #29394d;
+    transform: translateY(-2px);
+    box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.6);
+  }
+}
+input {
+  outline: none;
+  border: none;
+}
+
+textarea {
+  outline: none;
+  border: none;
+}
+
+textarea:focus,
+input:focus {
+  border-color: transparent !important;
+}
+
+/*---------------------------------------------*/
+
+.wrap-input100 {
+  width: 100%;
+  position: relative;
+  border-bottom: 2px solid #adadad;
+  margin-bottom: 1.5rem;
+  &:last-child {
+    margin-bottom: 4rem;
+  }
+}
+
+.input100 {
+  font-family: Poppins-Regular;
+  font-size: 15px;
+  color: #555555;
+  line-height: 1.2;
+
+  display: block;
+  width: 100%;
+  height: 40px;
+  background: transparent;
+  padding: 0 5px;
+}
+
+/*---------------------------------------------*/
+.focus-input100 {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.focus-input100::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+
+  background-image: linear-gradient(to right, #21d4fd, #b721ff);
+}
+
+.focus-input100::after {
+  font-size: 15px;
+  color: #999999;
+  line-height: 1.2;
+
+  content: attr(data-placeholder);
+  display: block;
+  width: 100%;
+  position: absolute;
+  top: 16px;
+  left: 0px;
+  padding-left: 5px;
+
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.input100:focus + .focus-input100::after {
+  top: -15px;
+}
+
+.input100:focus + .focus-input100::before {
+  width: 100%;
+}
+
+.has-val.input100 + .focus-input100::after {
+  top: -15px;
+}
+
+.has-val.input100 + .focus-input100::before {
+  width: 100%;
+}
